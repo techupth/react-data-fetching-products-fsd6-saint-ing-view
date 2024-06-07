@@ -9,18 +9,16 @@ function App() {
     const result = await axios.get("http://localhost:4001/products");
 
     setProduct(result.data.data);
-    //console.log(post.data.data);
+    //console.log(result.data.data);
   };
 
   const handleDelete = async (productId) => {
-    // Implement delete functionality here
-    console.log(productId);
+    //console.log(productId);
     const result = await axios.delete(
       "http://localhost:4001/products/" + productId
     );
-    console.log(result);
+    //console.log(result);
   };
-  //getBlogPost();
   useEffect(() => {
     getProduct();
   }, []);
